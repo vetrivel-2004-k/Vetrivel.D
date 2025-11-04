@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Coagulation-cum-Sedimentation Designer</title>
+<!-- Link to external CSS file: styles.css -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<main class="container">
+<h1>Coagulation-cum-Sedimentation Tank Design</h1>
+<p class="hint">Enter input values (defaults copied from your scanned example). Click <strong>Calculate & Draw</strong> to see results and an automatic diagram.</p>
+
+
+<section class="controls card">
+<div class="row"><label>Population</label><input id="pop" type="number" value="60000" /></div>
+<div class="row"><label>Per-capita demand (L/day)</label><input id="percap" type="number" value="120" /></div>
+<div class="row"><label>Max demand factor (× average)</label><input id="maxfactor" type="number" step="0.01" value="1.8" /></div>
+<div class="row"><label>Detention for settling (hours)</label><input id="detentionHr" type="number" step="0.1" value="4" /></div>
+<div class="row"><label>Detention for floc (minutes)</label><input id="flocMin" type="number" value="20" /></div>
+<div class="row"><label>Tank width B (m)</label><input id="widthB" type="number" step="0.1" value="12" /></div>
+<div class="row"><label>Tank depth (m)</label><input id="depth" type="number" step="0.1" value="4" /></div>
+<div class="row"><label>Overflow rate (L/hr/m²)</label><input id="overflow" type="number" step="1" value="1000" /></div>
+<div class="actions"><button id="calcBtn">Calculate &amp; Draw</button></div>
+</section>
+
+
+<section id="results" class="card results" aria-live="polite" style="display:none"></section>
+
+
+<svg id="diagram" class="diagram" viewBox="0 0 900 260" preserveAspectRatio="xMidYMid meet" style="display:none"></svg>
+
+
+<footer class="small">Designed from your scanned textbook example — uses the same calculation approach.</footer>
+</main>
+<script src="java.js"></script>
+</body>
+</html>

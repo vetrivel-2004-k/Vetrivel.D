@@ -1,0 +1,150 @@
+:root {
+  --text-color: #080707;
+  --muted: rgba(35, 29, 29, 0.85);
+  --btn-primary-bg: #fcf9f9;
+  --btn-primary-color: #0b2540;
+  --btn-outline-border: rgba(37, 35, 35, 0.9);
+}
+
+/* Reset and base setup */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  background-image: url("WhatsApp Image 2025-11-02 at 13.30.42_edca4dcc.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Full-screen overlay container */
+.overlay {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 20px;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* Header (logo + nav) */
+.header {
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--text-color);
+  font-size: 18px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 6px;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav a:hover {
+  color: var(--text-color);
+}
+
+.nav a.active {
+  color: var(--text-color);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+/* Hero text */
+.hero-inner {
+  max-width: 900px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.title {
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+/* Buttons */
+.cta {
+  display: inline-flex;
+  gap: 14px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-color);
+  border: none;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.12);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--btn-outline-border);
+  color: var(--text-color);
+}
+
+/* Small text below buttons */
+.small-line {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Footer credit */
+.credit {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+}
+
